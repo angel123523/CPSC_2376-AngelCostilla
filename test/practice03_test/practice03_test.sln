@@ -1,9 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "practice03_test", "practice03_test\practice03_test.vcxproj", "{AA150195-DB2A-44D3-B9CF-D9C8333AF0C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\googletest\googletest\src\gtest-all.cc = ..\..\..\googletest\googletest\src\gtest-all.cc
+		..\..\..\googletest\googletest\src\gtest-assertion-result.cc = ..\..\..\googletest\googletest\src\gtest-assertion-result.cc
+		..\..\..\googletest\googletest\src\gtest-death-test.cc = ..\..\..\googletest\googletest\src\gtest-death-test.cc
+		..\..\..\googletest\googletest\src\gtest-filepath.cc = ..\..\..\googletest\googletest\src\gtest-filepath.cc
+		..\..\..\googletest\googletest\src\gtest-matchers.cc = ..\..\..\googletest\googletest\src\gtest-matchers.cc
+		..\..\..\googletest\googletest\src\gtest-port.cc = ..\..\..\googletest\googletest\src\gtest-port.cc
+		..\..\..\googletest\googletest\src\gtest-printers.cc = ..\..\..\googletest\googletest\src\gtest-printers.cc
+		..\..\..\googletest\googletest\src\gtest-test-part.cc = ..\..\..\googletest\googletest\src\gtest-test-part.cc
+		..\..\..\googletest\googletest\src\gtest-typed-test.cc = ..\..\..\googletest\googletest\src\gtest-typed-test.cc
+		..\..\..\googletest\googletest\src\gtest.cc = ..\..\..\googletest\googletest\src\gtest.cc
+		..\..\..\googletest\googletest\include\gtest\gtest.h = ..\..\..\googletest\googletest\include\gtest\gtest.h
+		..\..\..\googletest\googletest\src\gtest_main.cc = ..\..\..\googletest\googletest\src\gtest_main.cc
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {391002DF-A643-41EA-9D8E-85426EAC1E9B}
 	EndGlobalSection
 EndGlobal

@@ -2,6 +2,7 @@
 #include "pch.h"
 #include "practice03.cpp"
 
+
 TEST(MathUtilsTest, SumRange) {
   EXPECT_EQ(MathUtils::sumRange(1, 5),10);
   EXPECT_EQ(MathUtils::sumRange(3, 3), 0);
@@ -20,7 +21,3 @@ TEST(MathUtilsTest, FindMax) {
 	EXPECT_THROW(MathUtils::findMax({}), std::invalid_argument);
 }
 
-int main(int argc, char** argv) {
-	::testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
-}

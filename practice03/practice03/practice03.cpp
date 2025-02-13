@@ -1,5 +1,6 @@
 // practice03.cpp (Buggy Code to be tested)
 #include <iostream>
+#include "pch.h"
 #include <vector>
 
 class MathUtils {

@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "pch.h"
-#include "practice03.cpp"
+#include "main.cpp"
 
 
 TEST(MathUtilsTest, SumRange) {

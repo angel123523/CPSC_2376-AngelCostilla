@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <limits>
 
 const std::string FILENAME = "account_balance.txt";
 
@@ -45,10 +46,11 @@ void checkBalance(double balance) {
 void deposit(double& balance) {
 	double amount;
 	std::cout << "Enter deposit amount: $";
-	std::cin >> amount;
-	if (amount <= 0) {
-		std::cout << "error: cannot deposit a negitive amount.";
-		return;
+	while (!(std::cin >> amount) || amount <= 0) {
+		std::cout << "Error: Please enter a valid positive number.\n";
+		std::cout << "Enter deposit amount: $";
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
 	balance += amount;
 	writeBalanceFile(balance);
@@ -57,7 +59,7 @@ void deposit(double& balance) {
 void withdraw(double& balance) {
 	double amount;
 	std::cout << "enter withdrawal amount $";
-	std::cin >> amount;
+	while (!(std::cin >> amount) || amount <= 0 || amount > balance) {
 	if (amount <= 0) {
 		std::cout << "error: cannot withdrawal a negitive amount.\n ";
 		return;
@@ -65,6 +67,10 @@ void withdraw(double& balance) {
 	if (amount > balance) {
 		std::cout << "error: insufficient funds. your balance is $:" << balance;
 		return;
+	}
+	std::cout << "Enter withdrawal amount: $";
+	std::cin.clear();  
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  
 	}
 	balance -= amount;
 	writeBalanceFile(balance);
@@ -80,7 +86,12 @@ void Menu(double& balance) {
 		std::cout << "4. exit\n";
 		std::cout << "Select an option:\n";
 		std::cin >> choice;
-
+		
+		while (!(std::cin >> choice) || choice < 1 || choice > 4) {
+			std::cout << "Invalid choice. Please try again: ";
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
 		if (choice == 1) {
 			checkBalance(balance);
 		}

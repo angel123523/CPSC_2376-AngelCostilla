@@ -1,7 +1,7 @@
 #include <iostream>
 #include "minesweeper.h"
 
-std::ostream& operator<<(std::ostream& os, const GameStatus& status) { // used ai to et 
+std::ostream& operator<<(std::ostream& os, const GameStatus& status) { // had trouble getting this file to work, and chatgpt suggested the switch statements. 
     switch (status) {
     case GameStatus::ONGOING:
         os << "Ongoing";

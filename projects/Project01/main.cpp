@@ -96,7 +96,7 @@ private:
 			for (int c = 0; c < cols; ++c) {
 				if (display.at(r).at(c) == CellState::REVEALED) {
 					if (board.at(r).at(c) == -1) {
-						// Player hit a mine, game over
+					
 						if (currentPlayer == 1) {
 							player1Safe = false;
 						}
